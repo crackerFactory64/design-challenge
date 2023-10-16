@@ -75,7 +75,7 @@ select {
 
 /*RESET ENDS*/
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
 
 body {
   background-color: black;
@@ -83,8 +83,93 @@ body {
   background-position: bottom center;
   background-size: cover;
   color: #fff;
+  display: grid;
   font-family: "Barlow", Helvetica, sans-serif;
+  grid-template-rows: auto 1fr;
   margin: 0;
-  padding: 1em;
+  padding: 0 1em;
   text-transform: uppercase;
+}
+
+header {
+  align-items: stretch;
+  display: flex;
+  gap: 2em;
+}
+
+header img {
+  max-width: 20rem;
+}
+
+header > nav {
+  display: flex;
+  width: 100%;
+}
+
+header ul {
+  align-items: center;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding-left: 0;
+  padding-top: 1em;
+  list-style: none;
+}
+
+nav a {
+  color: inherit;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.nav__aside {
+  margin-left: auto;
+}
+
+.nav__hamburger-button {
+  aspect-ratio: 1;
+  height: 2em;
+}
+
+.nav__hamburger-menu.closed {
+  display: none;
+}
+
+main {
+  display: flex;
+  min-height: 90vh;
+  position: relative;
+}
+
+.main__content {
+  margin-bottom: 10em;
+  margin-top: auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main__cta {
+  border: 2px solid;
+  color: inherit;
+  display: block;
+  margin-top: 1em;
+  padding: 1em 2em;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.main__arrow-container {
+  aspect-ratio: 1;
+  border: 1px solid;
+  bottom: 1em;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 3em;
 }
