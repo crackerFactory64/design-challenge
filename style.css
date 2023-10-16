@@ -79,7 +79,12 @@ select {
 
 body {
   background-color: black;
+  background-image: url("./bg.jpg");
+  background-position: bottom center;
+  background-size: cover;
   color: #fff;
   font-family: "Barlow", Helvetica, sans-serif;
+  margin: 0;
+  padding: 1em;
   text-transform: uppercase;
 }
