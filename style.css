@@ -118,7 +118,8 @@ header ul {
 
 nav a {
   color: inherit;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -128,8 +129,22 @@ nav a {
 }
 
 .nav__hamburger-button {
+  align-items: center;
   aspect-ratio: 1;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
   height: 2em;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.hamburger__bar {
+  background-color: #fff;
+  height: 3px;
+  width: 100%;
 }
 
 .nav__hamburger-menu.closed {
