@@ -77,6 +77,17 @@ select {
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
 
+@font-face {
+  font-family: "D-DIN";
+  src: url(./font/D-DINCondensed.otf);
+}
+
+@font-face {
+  font-family: "D-DIN";
+  src: url(./font/D-DIN-Bold.otf);
+  font-weight: 700;
+}
+
 body {
   background-color: black;
   background-image: url("./bg.jpg");
@@ -84,7 +95,7 @@ body {
   background-size: cover;
   color: #fff;
   display: grid;
-  font-family: "Barlow", Helvetica, sans-serif;
+  font-family: "D-DIN", "Barlow", Helvetica, sans-serif;
   grid-template-rows: auto 1fr;
   margin: 0;
   padding: 0 1em;
@@ -119,7 +130,7 @@ header ul {
 nav a {
   color: inherit;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -207,6 +218,8 @@ main {
 }
 
 .main__pre-heading {
+  font-size: 1.5rem;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 
@@ -220,8 +233,11 @@ h1 {
   border: 2px solid;
   color: inherit;
   display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
   margin-top: 1em;
-  padding: 1em 2em;
+  padding: 1em 2.66em;
   text-decoration: none;
   width: fit-content;
 }
