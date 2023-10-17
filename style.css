@@ -128,11 +128,16 @@ nav a {
   margin-left: auto;
 }
 
+.nav__aside > li:last-of-type {
+  z-index: 1000;
+}
+
 .nav__hamburger-button {
   align-items: center;
   aspect-ratio: 1;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -147,11 +152,50 @@ nav a {
   width: 100%;
 }
 
+.nav__hamburger-menu {
+  background-color: black;
+  height: 100dvh;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  visibility: visible;
+  width: 20vw;
+}
+
 .nav__hamburger-menu.closed {
-  display: none;
+  opacity: 0;
+  right: -1000;
+  visibility: hidden;
+}
+
+.nav__hamburger-menu > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5em 1.25em;
+  place-content: end;
+  text-align: end;
+  width: 100%;
+}
+
+.nav__hamburger-menu li {
+  width: 100%;
+}
+
+.nav__hamburger-menu li::after {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.nav__hamburger-menu a {
+  font-weight: 400;
 }
 
 main {
+  font-weight: 600;
   display: flex;
   min-height: 90vh;
   position: relative;
@@ -160,6 +204,10 @@ main {
 .main__content {
   margin-bottom: 10em;
   margin-top: auto;
+}
+
+.main__pre-heading {
+  letter-spacing: 1px;
 }
 
 h1 {
