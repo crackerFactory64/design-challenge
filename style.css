@@ -189,6 +189,7 @@ nav a:hover::after {
   right: 0;
   visibility: visible;
   width: 20vw;
+  z-index: 100;
 }
 
 .nav__hamburger-menu.closed {
@@ -220,7 +221,17 @@ nav a:hover::after {
 }
 
 .nav__hamburger-menu a {
+  font-size: 1rem;
   font-weight: 400;
+  transition: opacity 0.3s;
+}
+
+.nav__hamburger-menu a::after {
+  content: unset;
+}
+
+.nav__hamburger-menu a:is(:hover, :focus-visible) {
+  opacity: 0.5;
 }
 
 main {
