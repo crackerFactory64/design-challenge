@@ -148,7 +148,7 @@ nav a::after {
   right: 0;
 }
 
-nav a:hover::after {
+nav a:is(:hover, :focus-visible)::after {
   left: 0;
   width: 100%;
 }
@@ -170,15 +170,28 @@ nav a:hover::after {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  height: 2em;
+  height: 1.8em;
   justify-content: center;
   padding: 0 6px;
 }
 
 .hamburger__bar {
   background-color: #fff;
-  height: 3px;
+  height: 2px;
+  transition: 0.33s;
   width: 100%;
+}
+
+.nav__hamburger-button.close > .hamburger__bar:first-child {
+  transform: rotate(45deg) translate(0, 7px);
+}
+
+.nav__hamburger-button.close > .hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__hamburger-button.close > .hamburger__bar:last-child {
+  transform: rotate(-45deg) translate(0, -7px);
 }
 
 .nav__hamburger-menu {
