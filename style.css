@@ -133,6 +133,24 @@ nav a {
   font-weight: 400;
   letter-spacing: 1px;
   text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 1px;
+  transition: width 0.25s;
+  position: absolute;
+  bottom: -0.2em;
+  width: 0;
+  right: 0;
+}
+
+nav a:hover::after {
+  left: 0;
+  width: 100%;
 }
 
 .nav__aside {
