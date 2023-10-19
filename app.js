@@ -7,3 +7,11 @@ function toggleMenu() {
 }
 
 hamburgerButton.addEventListener("click", toggleMenu);
+
+setTimeout(() => {
+  document.querySelector(".main__content").classList.add("animate");
+}, 1);
+
+setTimeout(() => {
+  document.querySelector(".main__arrow").classList.add("animate");
+}, 1000);
