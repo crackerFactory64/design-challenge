@@ -96,11 +96,23 @@ body {
   color: #fff;
   display: grid;
   font-family: "D-DIN", "Barlow", Helvetica, sans-serif;
+  font-size: 1rem;
   grid-template-rows: auto 1fr;
   margin: 0;
   overflow-x: hidden;
   padding: 0 1em;
   text-transform: uppercase;
+}
+
+.filter {
+  background-color: black;
+  min-height: 100dvh;
+  opacity: 0.2;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1000;
 }
 
 header {
@@ -130,7 +142,6 @@ header ul {
 
 nav a {
   color: inherit;
-  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-decoration: none;
@@ -281,6 +292,8 @@ main {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 1px;
+  margin: 0;
+  line-height: 0.5;
 }
 
 h1 {
@@ -293,10 +306,9 @@ h1 {
   border: 2px solid #fff;
   color: inherit;
   display: block;
-  font-size: 1rem;
   font-weight: 700;
-  margin-top: 1em;
-  padding: 0.8em 2.66em;
+  margin-top: 1.25em;
+  padding: 1em 3em;
   position: relative;
   text-decoration: none;
   transition: color 0.4s;
